@@ -4,12 +4,12 @@ import styles from "../styles/Administrar.module.css";
 import { firestore } from "../lib/firebase";
 import toast from "react-hot-toast";
 
-export default function MagazineList({ magazines }) {
+export default function MagazineList({ magazines, admin = true }) {
   return (
     <>
       {magazines &&
         magazines.map((magazine, i) => (
-          <Magazine key={i} data={magazine} admin={true} />
+          <Magazine key={i} data={magazine} admin={admin} />
         ))}
     </>
   );
@@ -41,9 +41,11 @@ function Magazine({ data, admin = false }) {
         >
           Ver revista
         </a>
-        <button className="button" onClick={handleDeleteMagazine}>
-          Borrar
-        </button>
+        {admin && (
+          <button className="button" onClick={handleDeleteMagazine}>
+            Borrar
+          </button>
+        )}
       </div>
     </div>
   );
