@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   const [background, setBackground] = useState(null);
@@ -22,6 +23,7 @@ function MyApp({ Component, pageProps }) {
       <Navbar />
       <Component {...pageProps} />
       <Footer />
+      <Toaster />
     </div>
   );
 }

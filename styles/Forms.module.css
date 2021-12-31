@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 30px;
+  width: clamp(500px, 30%, 30%);
+}
+.form label {
+  color: white;
+  display: flex;
+}
+.form label input,
+.form label select {
+  width: 150px;
+  margin-left: 15px;
+}

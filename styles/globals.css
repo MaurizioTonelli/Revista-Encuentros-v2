@@ -105,10 +105,23 @@ article {
   align-items: center;
   justify-content: center;
 }
+.magazine-canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .main h2 {
   color: rgb(5, 5, 5);
   text-transform: uppercase;
   font-size: 5em;
+  justify-self: flex-end;
+  border-bottom: 2px solid #afafaf;
+  font-weight: 300;
+}
+.main h3 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5em;
   justify-self: flex-end;
   border-bottom: 2px solid #afafaf;
   font-weight: 300;
@@ -146,4 +159,25 @@ article {
 }
 .transparent {
   background-color: rgba(63, 63, 63, 0.705);
+}
+.button {
+  padding: 10px 15px;
+  background-color: #cccccc50;
+  border: 5px solid #ccc;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: 0.15s all ease-in-out;
+}
+.button img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+.button:hover {
+  transform: scale(1.1);
+  background-color: #cccccc90;
+  color: black;
+  border: 5px solid #333;
+  cursor: pointer;
 }

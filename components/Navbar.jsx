@@ -1,4 +1,6 @@
 import Link from "next/link";
+import AdminGuard from "./AdminGuard";
+import { logOut } from "../lib/authUtils";
 
 export default function Navbar({}) {
   return (
@@ -13,6 +15,14 @@ export default function Navbar({}) {
         <li>
           <Link href="/acercade">ACERCA DE</Link>{" "}
         </li>
+        <AdminGuard>
+          <li>
+            <Link href="/administrar">ADMINISTRAR</Link>
+          </li>
+          <li onClick={logOut}>
+            <Link href="/">CERRAR SESIÓN</Link>
+          </li>
+        </AdminGuard>
       </ul>
     </nav>
   );

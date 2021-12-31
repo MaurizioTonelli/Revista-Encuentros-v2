@@ -1,0 +1,16 @@
+.magazineEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 50%;
+  margin: 10px 0px;
+}
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.actions .link {
+  margin: 0px 15px;
+}
